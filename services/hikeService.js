@@ -2,6 +2,24 @@ const { request, gql } = require('graphql-request');
 
 const GRAPHQL_API_ENDPOINT = 'https://taylor.callsen.me/api/photo/graphql';
 
+const getRecentHikes = async function() {
+
+  const query = gql`
+    {
+      hikes: routes_public(limit: 3, order_by: {route_id: desc}) {
+        route_id
+        title
+        date_created
+        stats
+      }
+    }
+  `;
+
+  return request(GRAPHQL_API_ENDPOINT, query);
+
+}
+
+
 const getHike = async function(hikeId) {
 
   const query = gql`
@@ -27,31 +45,11 @@ const getHike = async function(hikeId) {
 
 }
 
-const getRecentHikes = async function() {
+const getPhotosByTimeRange = async function(startTime, endTime) {
 
   const query = gql`
     {
-      hikes: routes_public(limit: 3, order_by: {route_id: desc}) {
-        route_id
-        title
-        date_created
-        stats
-      }
-    }
-  `;
-
-  return request(GRAPHQL_API_ENDPOINT, query);
-
-}
-
-const getPhotosDuringHike = async function(hikeId) {
-
-  const hikeResponse = await getHike(hikeId);
-  const hike = hikeResponse.hikes[0]; // take first hike
-
-  const query = gql`
-    {
-      photos: photos_public(limit: 10, where: {_and: {meta_date_taken: {_gte: "${hike.stats.startTime}", _lte: "${hike.stats.endTime}"}}}) {
+      photos: photos_public(limit: 10, where: {_and: {meta_date_taken: {_gte: "${startTime}", _lte: "${endTime}"}}}) {
         photo_id
         title
         date_added
@@ -66,8 +64,18 @@ const getPhotosDuringHike = async function(hikeId) {
 
 }
 
+const getPhotosDuringHike = async function(hikeId) {
+
+  const hikeResponse = await getHike(hikeId);
+  const hike = hikeResponse.hikes[0]; // take first hike
+
+  return getPhotosByTimeRange(hike.stats.startTime, hike.stats.endTime);
+
+}
+
 module.exports = {
-  getHike,
   getRecentHikes,
+  getHike,
+  getPhotosByTimeRange,
   getPhotosDuringHike,
 }
