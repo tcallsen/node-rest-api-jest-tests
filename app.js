@@ -17,4 +17,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/hikes', hikesRouter);
 app.use('*', defaultRouter);
 
+// register custom error handling middleware
+app.use(function (err, req, res, next) {
+  res.status(err.status).send(err.message);
+});
+
 module.exports = app;
