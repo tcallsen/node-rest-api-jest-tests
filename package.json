@@ -2,7 +2,8 @@
   "name": "node-rest-api-jest-tests",
   "version": "0.0.0",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,5 +12,9 @@
     "graphql": "^16.3.0",
     "graphql-request": "^4.1.0",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
   }
 }
