@@ -1,7 +1,7 @@
-var express = require('express');
+import express from 'express';
 var router = express.Router();
 
-const { getHike, getRecentHikes, getPhotosDuringHike } = require('../services/hikeService');
+import { getHike, getRecentHikes, getPhotosDuringHike } from '../services/hikeService.js';
 
 // returns a list of recent hikes
 router.get('/', async function(req, res, next) {
@@ -47,4 +47,4 @@ router.get('/:hikeId/photos', async function(req, res, next) {
 
 });
 
-module.exports = router;
+export default router;

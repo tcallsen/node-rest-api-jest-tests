@@ -1,8 +1,9 @@
 {
   "name": "node-rest-api-jest-tests",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./bin/www.js",
     "test": "jest"
   },
   "dependencies": {
@@ -14,6 +15,8 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
     "jest": "^27.5.1",
     "supertest": "^6.2.2"
   }

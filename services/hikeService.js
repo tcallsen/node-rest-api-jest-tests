@@ -1,4 +1,4 @@
-const { request, gql } = require('graphql-request');
+import { request, gql } from 'graphql-request';
 
 const GRAPHQL_API_ENDPOINT = 'https://taylor.callsen.me/api/photo/graphql';
 
@@ -73,7 +73,7 @@ const getPhotosDuringHike = async function(hikeId) {
 
 }
 
-module.exports = {
+export {
   getRecentHikes,
   getHike,
   getPhotosByTimeRange,
