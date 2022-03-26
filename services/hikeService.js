@@ -6,7 +6,7 @@ const getRecentHikes = async function() {
 
   const query = gql`
     {
-      hikes: routes_public(limit: 3, order_by: {route_id: desc}) {
+      hikes: routes_public(limit: 5, order_by: {route_id: desc}) {
         route_id
         title
         date_created

@@ -1,0 +1,18 @@
+{
+  "hikes": [
+      {
+          "route_id": 123,
+          "title": "Hightower Demo Ride",
+          "date_created": "2019-11-12T08:32:03.184989-08:00",
+          "stats": {
+              "startTime": "2019-10-30T16:49:40Z",
+              "endTime": "2019-10-30T19:05:28Z",
+              "distance": 13.39420837467362,
+              "duration": 8148000,
+              "elevationGain": 520.2000000000029,
+              "successful": 1,
+              "message": "Statistics calculated successfully."
+          }
+      }
+  ]
+}

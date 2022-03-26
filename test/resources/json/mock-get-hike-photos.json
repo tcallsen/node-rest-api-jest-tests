@@ -1,0 +1,32 @@
+{
+  "photos": [
+      {
+          "photo_id": 12140,
+          "title": "",
+          "date_added": "2019-11-12T08:12:04.115236-08:00",
+          "meta_date_taken": "2019-10-30T11:39:25-07:00",
+          "meta_geom": {
+              "type": "Point",
+              "coordinates": [
+                  -122.08794722222,
+                  36.979422222222
+              ]
+          },
+          "original_filename": "IMG_20191030_113925.jpg"
+      },
+      {
+          "photo_id": 12139,
+          "title": "",
+          "date_added": "2019-11-12T08:11:11.92863-08:00",
+          "meta_date_taken": "2019-10-30T11:39:23-07:00",
+          "meta_geom": {
+              "type": "Point",
+              "coordinates": [
+                  -122.08794166667,
+                  36.979427777778
+              ]
+          },
+          "original_filename": "IMG_20191030_113923.jpg"
+      }
+  ]
+}

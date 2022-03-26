@@ -1,0 +1,46 @@
+{
+    "hikes": [
+        {
+            "route_id": 211,
+            "title": "Day-off Flowtrail",
+            "date_created": "2021-11-28T10:30:04.245429-08:00",
+            "stats": {
+                "startTime": "2021-09-03T18:42:24Z",
+                "endTime": "2021-09-03T21:15:29Z",
+                "distance": 15.618722528592954,
+                "duration": 9185000,
+                "elevationGain": 3981.4207153320312,
+                "successful": 1,
+                "message": "Statistics calculated successfully."
+            }
+        },
+        {
+            "route_id": 210,
+            "title": "Pleasanton Ridge Loop",
+            "date_created": "2021-11-28T10:30:01.727298-08:00",
+            "stats": {
+                "startTime": "2021-08-31T23:49:08Z",
+                "endTime": "2021-09-01T02:07:05Z",
+                "distance": 13.201541406494446,
+                "duration": 8277000,
+                "elevationGain": 7807.019714355469,
+                "successful": 1,
+                "message": "Statistics calculated successfully."
+            }
+        },
+        {
+            "route_id": 209,
+            "title": "Top of the Ridge for First time with Hightower",
+            "date_created": "2021-08-25T20:30:11.586902-07:00",
+            "stats": {
+                "startTime": "2021-08-25T14:29:55Z",
+                "endTime": "2021-08-25T16:05:54Z",
+                "distance": 10.239248246147428,
+                "duration": 5759000,
+                "elevationGain": 3368.400000000002,
+                "successful": 1,
+                "message": "Statistics calculated successfully."
+            }
+        }
+    ]
+}
