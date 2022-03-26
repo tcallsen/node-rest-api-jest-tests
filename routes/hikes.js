@@ -1,7 +1,8 @@
 import express from 'express';
 var router = express.Router();
 
-import { getHike, getRecentHikes, getPhotosDuringHike } from '../services/hikeService.js';
+import { getHike, getRecentHikes } from '../services/hikeService.js';
+import { getPhotosDuringHike } from '../utils/hikeUtils.js';
 
 // returns a list of recent hikes
 router.get('/', async function(req, res, next) {

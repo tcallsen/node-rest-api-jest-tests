@@ -64,18 +64,8 @@ const getPhotosByTimeRange = async function(startTime, endTime) {
 
 }
 
-const getPhotosDuringHike = async function(hikeId) {
-
-  const hikeResponse = await getHike(hikeId);
-  const hike = hikeResponse.hikes[0]; // take first hike
-
-  return getPhotosByTimeRange(hike.stats.startTime, hike.stats.endTime);
-
-}
-
 export {
   getRecentHikes,
   getHike,
   getPhotosByTimeRange,
-  getPhotosDuringHike,
 }

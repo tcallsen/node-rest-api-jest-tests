@@ -2,8 +2,8 @@ import request from 'supertest';
 
 import app from '../../app.js';
 
-// manual mock of an entire module
-//  https://jestjs.io/docs/manual-mocks
+// include manual mock of the hikingService module - https://jestjs.io/docs/manual-mocks
+//  see full definition of manual mock in '../../services/__mocks__/hikeService.js'
 jest.mock('../../services/hikeService.js');
 
 describe('Hikes Route Tests', () => {

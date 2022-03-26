@@ -10,7 +10,7 @@ hikeService.getHike = jest.fn(async () => {
   return JSON.parse(fs.readFileSync('./test/resources/json/mock-get-hike.json'));
 });
 
-hikeService.getPhotosDuringHike = jest.fn(async () => {
+hikeService.getPhotosByTimeRange = jest.fn(async () => {
   return JSON.parse(fs.readFileSync('./test/resources/json/mock-get-hike-photos.json'));
 });
 
