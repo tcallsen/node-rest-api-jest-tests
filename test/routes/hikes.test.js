@@ -84,7 +84,7 @@ describe('Hikes Route Tests', () => {
 
   test('Should return 404 if /hikes/{id} not found', async () => {
     
-    // mock Error creation when hike not found 
+    // mock Error response when hike not found 
     jest.spyOn(hikeService, 'getHike').mockImplementation(() => {
       const err = new Error('hike not found');
       err.status = 404;
