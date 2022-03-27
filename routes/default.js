@@ -1,7 +1,9 @@
 import express from 'express';
 var router = express.Router();
 
-// return 401 for any requests that reach this route
+/**
+ * Any requests that reach this route will have an empty 401 response code returned.
+ */
 router.get('*', function(req, res, next) {
   res.sendStatus(401)
 })
