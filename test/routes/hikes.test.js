@@ -70,11 +70,29 @@ describe('Hikes Route Tests', () => {
 
   });
 
+  test('Should return 400 if invalid /hikes/{id} supplied', async () => {
+    const rootRouteResponse = await request(app).get("/hikes/invalid-hike-id");
+    expect(rootRouteResponse.statusCode).toBe(400);
+  });
+
   test('Should return 401 for non-supported routes', async () => {
     const rootRouteResponse = await request(app).get("/");
     expect(rootRouteResponse.statusCode).toBe(401);
     const invalidRouteResponse = await request(app).get("/invalid-route");
     expect(invalidRouteResponse.statusCode).toBe(401);
+  });
+
+  test('Should return 404 if /hikes/{id} not found', async () => {
+    
+    // mock Error creation when hike not found 
+    jest.spyOn(hikeService, 'getHike').mockImplementation(() => {
+      const err = new Error('hike not found');
+      err.status = 404;
+      throw err;
+    });
+    
+    const rootRouteResponse = await request(app).get("/hikes/123");
+    expect(rootRouteResponse.statusCode).toBe(404);
   });
   
 });
