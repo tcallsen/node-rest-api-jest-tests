@@ -1,4 +1,4 @@
-# Sample Node.js Integration Tested with Jest
+# How to Test Node.js Integrations with Jest
 
 This repo provides a sample Node.js REST API that makes calls out to an external GraphQL endpoint and returns the Graph data to the user. 
 
