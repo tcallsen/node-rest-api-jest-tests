@@ -51,3 +51,6 @@ Tests can be executed with a debugger in VS Code using the [Jest Runner](https:/
 ## Development
 
 This application was bootstrapped with [Express Application Generator](https://expressjs.com/en/starter/generator.html), and was developed with Node.js version v16.13.1
+
+## Supplemental Blog Post
+Here is a blog post I created that explains the setup and testing in further detail: https://taylor.callsen.me/testing-node-js-integrations-with-jest/
